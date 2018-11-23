@@ -1,6 +1,33 @@
 per togliersi da una repository cancellare la cartella .git (rm -rf .git)
-x aggiungere:
-git init
-git remote add {nome breve} git://github.com/{nome user}/{nome repo}.git
+Se vuoi copiare un repository Git esistente — il comando di cui hai bisogno è git clone
+git clone git://github.com/schacon/grit.git
+
+x iniziare:
+git init (inizializzi un nuovo repo)
+git add * (aggiungi tutti i files allo stage)
+git status (verifichi il tutto se vuoi)
+git commit -m "quello che vuoi scrivere" ( fai il commit)
+
+(in seguito senza che usi add puoi committare direttamente con:
+git commit -a -m "blablabla")
+
 x inviare il tutto al server:
+git remote add {nome breve} git://github.com/{nome user}/{nome repo}.git
 git push origin master
+
+x prelevare
+git fetch [nome-remoto]
+
+Ignorare File
+
+Spesso hai dei file che non vuoi che Git aggiunga automaticamente 
+e nemmeno che te li mostri come tracciati. 
+Generalmente si tratta di file generati automaticamente, 
+come i log o quelli prodotti dal tuoi sistema di build. 
+In questi casi puoi creare un file chiamato .gitignore con la lista di pattern dei file che vuoi ignorare. 
+Questo è un .gitignore d'esempio:
+
+$ cat .gitignore
+*.[oa]
+*~
+
