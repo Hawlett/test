@@ -1,0 +1,6 @@
+per togliersi da una repository cancellare la cartella .git (rm -rf .git)
+x aggiungere:
+git init
+git remote add {nome breve} git://github.com/{nome user}/{nome repo}.git
+x inviare il tutto al server:
+git push origin master
