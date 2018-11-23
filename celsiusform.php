@@ -3,7 +3,7 @@
 <body>
 <?php $fahrenheit = $_POST['fahrenheit']; ?>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-Fahrenheit temperature:
+Fahrenheit temperatura:
 <input type="text" name="fahrenheit" value="<?php echo $fahrenheit; ?>"/><br />
 <input type="submit" value="Convert to Celsius!" />
 </form>
